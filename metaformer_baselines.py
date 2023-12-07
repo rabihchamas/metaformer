@@ -25,8 +25,8 @@ import torch.nn.functional as F
 from timm.models.layers import trunc_normal_, DropPath
 from timm.models.registry import register_model
 from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
-from timm.models.layers.helpers import to_2tuple
-
+from timm.layers.helpers import _ntuple
+to_2tuple = _ntuple(2)
 
 def _cfg(url='', **kwargs):
     return {
